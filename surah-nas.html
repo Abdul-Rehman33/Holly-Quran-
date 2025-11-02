@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quran Majeed - Surah An-Nas</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {},
+                },
+            };
+        </script>
+        <link rel="stylesheet" href="css/styles.css" />
+        <!-- Google Fonts for Arabic and Urdu -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body
+        class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-200"
+    >
+        <!-- Header -->
+        <header class="bg-emerald-600 dark:bg-emerald-800 text-white shadow-md">
+            <div class="container mx-auto px-4 py-6">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center">
+                        <h1 class="text-3xl font-bold">قرآن مجید</h1>
+                        <span class="ml-4 text-xl">Quran Majeed</span>
+                    </div>
+
+                    <div class="flex items-center">
+                        <!-- Theme Toggle Button -->
+                        <button
+                            id="theme-toggle"
+                            class="p-2 rounded-full hover:bg-emerald-700 dark:hover:bg-emerald-900 mr-4 focus:outline-none"
+                        >
+                            <!-- Sun icon for dark mode -->
+                            <svg
+                                id="sun-icon"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-6 w-6"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                                />
+                            </svg>
+                            <!-- Moon icon for light mode -->
+                            <svg
+                                id="moon-icon"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-6 w-6 hidden"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                                />
+                            </svg>
+                        </button>
+
+                        <!-- Desktop Navigation -->
+                        <nav class="desktop-nav flex space-x-6">
+                            <a
+                                href="index.html"
+                                class="hover:text-emerald-200 font-medium"
+                                >Home</a
+                            >
+                            <a
+                                href="surahs.html"
+                                class="hover:text-emerald-200 font-medium"
+                                >Surahs</a
+                            >
+                            <a
+                                href="translations.html"
+                                class="hover:text-emerald-200 font-medium"
+                                >Translations</a
+                            >
+                            <a
+                                href="about.html"
+                                class="hover:text-emerald-200 font-medium"
+                                >About</a
+                            >
+                            <a
+                                href="contact.html"
+                                class="hover:text-emerald-200 font-medium"
+                                >Contact</a
+                            >
+                        </nav>
+                    </div>
+
+                    <!-- Mobile Navigation -->
+                    <div class="relative mobile-nav-container">
+                        <button id="hamburger-btn" class="hamburger-btn">
+                            <div class="hamburger-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </button>
+
+                        <nav class="mobile-nav" id="mobile-nav">
+                            <a
+                                href="index.html"
+                                class="hover:text-emerald-200 font-medium"
+                                >Home</a
+                            >
+                            <a
+                                href="surahs.html"
+                                class="hover:text-emerald-200 font-medium"
+                                >Surahs</a
+                            >
+                            <a
+                                href="translations.html"
+                                class="hover:text-emerald-200 font-medium"
+                                >Translations</a
+                            >
+                            <a
+                                href="about.html"
+                                class="hover:text-emerald-200 font-medium"
+                                >About</a
+                            >
+                            <a
+                                href="contact.html"
+                                class="hover:text-emerald-200 font-medium"
+                                >Contact</a
+                            >
+                        </nav>
+
+                        <label
+                            for="mobile-menu-toggle"
+                            class="menu-overlay"
+                        ></label>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container mx-auto px-4 py-8">
+            <!-- Surah Header -->
+            <div class="surah-header">
+                <h1 class="text-4xl font-bold mb-2">Surah An-Nas</h1>
+                <div class="flex justify-center items-center space-x-4">
+                    <span>Chapter 114</span>
+                    <span>•</span>
+                    <span>6 Verses</span>
+                    <span>•</span>
+                    <span>Meccan Surah</span>
+                </div>
+                <div class="arabic text-center text-3xl mt-4">سورة الناس</div>
+            </div>
+
+            <!-- Bismillah -->
+            <div class="bismillah arabic text-center">
+                بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+            </div>
+
+            <!-- Surah Content -->
+            <div
+                class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8"
+            >
+                <!-- Verse 1 -->
+                <div class="verse">
+                    <div class="flex items-start mb-4">
+                        <span class="verse-number">1</span>
+                        <div class="arabic-text arabic text-right text-2xl">
+                            قُلْ أَعُوذُ بِرَبِّ النَّاسِ
+                        </div>
+                    </div>
+                    <div
+                        class="translation-text urdu text-right pr-8 text-gray-700 dark:text-gray-300"
+                    >
+                        کہو میں پناہ مانگتا ہوں انسانوں کے رب کی
+                    </div>
+                </div>
+
+                <!-- Verse 2 -->
+                <div class="verse">
+                    <div class="flex items-start mb-4">
+                        <span class="verse-number">2</span>
+                        <div class="arabic-text arabic text-right text-2xl">
+                            مَلِكِ النَّاسِ
+                        </div>
+                    </div>
+                    <div
+                        class="translation-text urdu text-right pr-8 text-gray-700 dark:text-gray-300"
+                    >
+                        انسانوں کے بادشاہ کی
+                    </div>
+                </div>
+
+                <!-- Verse 3 -->
+                <div class="verse">
+                    <div class="flex items-start mb-4">
+                        <span class="verse-number">3</span>
+                        <div class="arabic-text arabic text-right text-2xl">
+                            إِلَٰهِ النَّاسِ
+                        </div>
+                    </div>
+                    <div
+                        class="translation-text urdu text-right pr-8 text-gray-700 dark:text-gray-300"
+                    >
+                        انسانوں کے معبود کی
+                    </div>
+                </div>
+
+                <!-- Verse 4 -->
+                <div class="verse">
+                    <div class="flex items-start mb-4">
+                        <span class="verse-number">4</span>
+                        <div class="arabic-text arabic text-right text-2xl">
+                            مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ
+                        </div>
+                    </div>
+                    <div
+                        class="translation-text urdu text-right pr-8 text-gray-700 dark:text-gray-300"
+                    >
+                        وسوسہ ڈالنے والے کے شر سے جو پیچھے ہٹ جاتا ہے
+                    </div>
+                </div>
+
+                <!-- Verse 5 -->
+                <div class="verse">
+                    <div class="flex items-start mb-4">
+                        <span class="verse-number">5</span>
+                        <div class="arabic-text arabic text-right text-2xl">
+                            الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ
+                        </div>
+                    </div>
+                    <div
+                        class="translation-text urdu text-right pr-8 text-gray-700 dark:text-gray-300"
+                    >
+                        جو لوگوں کے دلوں میں وسوسے ڈالتا ہے
+                    </div>
+                </div>
+
+                <!-- Verse 6 -->
+                <div class="verse">
+                    <div class="flex items-start mb-4">
+                        <span class="verse-number">6</span>
+                        <div class="arabic-text arabic text-right text-2xl">
+                            مِنَ الْجِنَّةِ وَالنَّاسِ
+                        </div>
+                    </div>
+                    <div
+                        class="translation-text urdu text-right pr-8 text-gray-700 dark:text-gray-300"
+                    >
+                        جنوں میں سے اور انسانوں میں سے
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="flex justify-between mt-8 flex-col md:flex-row gap-4">
+                <a
+                    href="surah-falaq.html"
+                    class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2 rounded-md transition duration-300"
+                    >Previous: Surah Al-Falaq</a
+                >
+                <a
+                    href="surahs.html"
+                    class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2 rounded-md transition duration-300"
+                    >Back to Surahs</a
+                >
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-100 dark:bg-gray-800 py-8">
+            <div class="container mx-auto px-4">
+                <div
+                    class="flex flex-col md:flex-row justify-between items-center"
+                >
+                    <div class="mb-4 md:mb-0">
+                        <h2 class="text-xl font-bold">Quran Majeed</h2>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">
+                            Spreading the light of the Quran
+                        </p>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a
+                            href="about.html"
+                            class="text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400"
+                            >About</a
+                        >
+                        <a
+                            href="contact.html"
+                            class="text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400"
+                            >Contact</a
+                        >
+                        <a
+                            href="surahs.html"
+                            class="text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400"
+                            >Surahs</a
+                        >
+                    </div>
+                </div>
+                <div
+                    class="mt-6 text-center text-sm text-gray-600 dark:text-gray-400"
+                >
+                    &copy; 2025 Quran Majeed. All rights reserved.
+                </div>
+            </div>
+        </footer>
+
+        <script src="./js/script.js"></script>
+    </body>
+</html>

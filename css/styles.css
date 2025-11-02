@@ -1,0 +1,207 @@
+/* Custom styles for Quran Majeed */
+
+/* Arabic Font */
+.arabic {
+    font-family: "Amiri", serif;
+    direction: rtl;
+    line-height: 2;
+}
+
+/* Urdu Font */
+.urdu {
+    font-family: "Noto Nastaliq Urdu", serif;
+    direction: rtl;
+    line-height: 2;
+}
+
+/* Dark mode toggle functionality */
+html.dark .theme-toggle:checked ~ .theme-toggle-label .toggle-dot {
+    transform: translateX(1.5rem);
+}
+
+html:not(.dark) .theme-toggle:checked ~ .theme-toggle-label .toggle-dot {
+    transform: translateX(0);
+}
+
+/* Dark mode toggle styling */
+.theme-toggle-label {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* CSS-only dark mode toggle */
+.theme-toggle:checked + .theme-toggle-label {
+    background-color: #4b5563;
+}
+
+html.light .theme-toggle:checked ~ * {
+    /* Switch to dark mode */
+    filter: invert(1) hue-rotate(180deg);
+}
+
+html.dark .theme-toggle:not(:checked) ~ * {
+    /* Switch to light mode */
+    filter: invert(1) hue-rotate(180deg);
+}
+
+/* Verse styling */
+.verse {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(156, 163, 175, 0.2);
+}
+
+.verse-number {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    background-color: #059669;
+    color: white;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    font-size: 0.875rem;
+}
+
+/* Surah header styling */
+.surah-header {
+    background: linear-gradient(135deg, #059669 0%, #0d9488 100%);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.bismillah {
+    font-size: 2rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+/* Responsive font sizes for Quran text */
+@media (max-width: 640px) {
+    .arabic-text {
+        font-size: 1.5rem;
+    }
+    .translation-text {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 641px) {
+    .arabic-text {
+        font-size: 2rem;
+    }
+    .translation-text {
+        font-size: 1.25rem;
+    }
+}
+
+/* Responsive Navigation */
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 30;
+}
+
+.hamburger-icon {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 20;
+}
+
+.hamburger-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none !important;
+    }
+
+    .hamburger-btn {
+        display: block;
+    }
+
+    .hamburger-icon {
+        display: block;
+    }
+
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: #059669;
+        padding-top: 80px;
+        transition: right 0.3s ease;
+        z-index: 20;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .dark .mobile-nav {
+        background-color: #065f46;
+    }
+
+    .mobile-nav a {
+        display: block;
+        padding: 15px 25px;
+        font-size: 1.1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* These classes will be toggled by JavaScript */
+    .mobile-nav.open {
+        right: 0;
+    }
+
+    .hamburger-icon.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger-icon.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-icon.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    /* Overlay for menu background */
+    .menu-overlay.active {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-nav-container {
+        display: none;
+    }
+}
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+}
